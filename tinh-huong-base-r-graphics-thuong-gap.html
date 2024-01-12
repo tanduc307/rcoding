@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.536">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -82,7 +82,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -91,6 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -106,12 +113,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cac-lenh-do-thi-can-ban-su-dung-base-r-graphics.html">Các lệnh đồ thị căn bản sử dụng Base R Graphics</a></li><li class="breadcrumb-item"><a href="./tinh-huong-base-r-graphics-thuong-gap.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">**Tình huống Base R Graphics thường gặp**</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cac-lenh-do-thi-can-ban-su-dung-base-r-graphics.html">Các lệnh đồ thị căn bản sử dụng Base R Graphics</a></li><li class="breadcrumb-item"><a href="./tinh-huong-base-r-graphics-thuong-gap.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><b>Tình huống Base R Graphics thường gặp</b></span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -121,10 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./"></a><a href="https://thongkesinhhoc.quarto.pub/">Thống kê sinh học: Từ lý thuyết đến ứng dụng</a> 
+      <a href="./"></a><a href="https://thongkesinhhoc.com/">Thống kê sinh học: Từ lý thuyết đến ứng dụng</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -152,31 +159,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-ve-do-thi-cot-base-r-graphics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn vẽ đồ thị cột bằng Base R Graphics</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị cột bằng Base R Graphics</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-cach-thay-doi-do-rong-cot-trong-barplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn cách thay đổi độ rộng cột trong barplot</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách thay đổi độ rộng cột trong barplot</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tinh-huong-base-r-graphics-thuong-gap.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Tình huống Base R Graphics thường gặp</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><b>Tình huống Base R Graphics thường gặp</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-ve-do-thi-nhieu-truc-y.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn vẽ đồ thị nhiều trục Y</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị nhiều trục Y</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-ve-do-thi-bang-package-lattice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn vẽ đồ thị bằng package <code>lattice</code></strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị bằng package `lattice`</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -193,67 +200,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khoang-tin-cay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><strong>Khoảng tin cậy là gì?</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-phan-tich-t-test-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn phân tích t-test trong R</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phan-tich-anova-2-yeu-to-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><strong>Phân tích ANOVA 2 yếu tố trong R</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./so-sanh-ket-qua-giua-parametric-va-non-parametric-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><strong>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phan-tich-ancova-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><strong>Phân tích ANCOVA trong R</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><b>Phân tích ANCOVA trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quy-trinh-phan-tich-logistic-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><strong>Quy trình phân tích logistic regression</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><b>Quy trình phân tích logistic regression</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khai-niem-bootstrap-qua-vi-du-tinh-trung-binh-mau.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><strong>Khái niệm về bootstrap qua ví dụ tính trung bình mẫu</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><b>Khái niệm về bootstrap qua ví dụ tính trung bình mẫu</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bo-tri-thi-nghiem-toi-uu-hoa-bang-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><strong>Bố trí thí nghiệm tối ưu hóa bằng R</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><b>Bố trí thí nghiệm tối ưu hóa bằng R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./workflow-phan-tich-thong-ke-qua-dataset-iris.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><strong>Workflow phân tích thống kê qua dataset <code>iris</code></strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><b>Workflow phân tích thống kê qua dataset <code>iris</code> </b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./example-partial-least-squares-and-principal-component-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title"><strong>Example for Partial Least Squares and Principal Component Regression</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title"><b>Example for Partial Least Squares and Principal Component Regression</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tai-lieu-phan-tich-pca.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title"><strong>Tài liệu phân tích PCA</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title"><b>Tài liệu phân tích PCA</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -270,25 +277,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</strong></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-cach-lam-tron-so-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Hướng dẫn cách làm tròn số trong R</strong></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-show-all-data-tren-console.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Hướng dẫn show all data trên console</strong></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn show all data trên console</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ky-thuat-reshape-du-lieu.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Kỹ thuật reshape dữ liệu</strong></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật reshape dữ liệu</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -302,20 +309,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cac-lenh-do-thi-can-ban-su-dung-base-r-graphics.html">Các lệnh đồ thị căn bản sử dụng Base R Graphics</a></li><li class="breadcrumb-item"><a href="./tinh-huong-base-r-graphics-thuong-gap.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><b>Tình huống Base R Graphics thường gặp</b></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><strong>Tình huống Base R Graphics thường gặp</strong></span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><b>Tình huống Base R Graphics thường gặp</b></span></h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -323,12 +330,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <section id="import-dataset" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="import-dataset"><span class="header-section-number">3.1</span> Import dataset</h2>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tuhocr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>crop_production <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata"</span>,</span>
@@ -359,18 +368,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>        area          item year production area_harvested yield
-123 Viet Nam Coffee, green 2021   1.845033       0.653192  2.82
-124 Viet Nam Coffee, green 2020   1.763476       0.637563  2.77
-125 Viet Nam Coffee, green 2019   1.686765       0.624100  2.70
-126 Viet Nam Coffee, green 2018   1.616307       0.618879  2.61
-127 Viet Nam Coffee, green 2017   1.542398       0.605178  2.55
-128 Viet Nam Coffee, green 2016   1.460800       0.597597  2.44
-129 Viet Nam Coffee, green 2015   1.452999       0.593800  2.45
-130 Viet Nam Coffee, green 2014   1.406469       0.589041  2.39
-131 Viet Nam Coffee, green 2013   1.326688       0.581381  2.28
-132 Viet Nam Coffee, green 2012   1.260463       0.572600  2.20
-133 Viet Nam Coffee, green 2011   1.276506       0.543865  2.35
-134 Viet Nam Coffee, green 2010   1.105700       0.511900  2.16</code></pre>
+178 Viet Nam Coffee, green 2021   1.845033       0.653192  2.82
+179 Viet Nam Coffee, green 2020   1.763476       0.637563  2.77
+180 Viet Nam Coffee, green 2019   1.686765       0.624100  2.70
+181 Viet Nam Coffee, green 2018   1.616307       0.618879  2.61
+182 Viet Nam Coffee, green 2017   1.542398       0.605178  2.55
+183 Viet Nam Coffee, green 2016   1.460800       0.597597  2.44
+184 Viet Nam Coffee, green 2015   1.452999       0.593800  2.45
+185 Viet Nam Coffee, green 2014   1.406469       0.589041  2.39
+186 Viet Nam Coffee, green 2013   1.326688       0.581381  2.28
+187 Viet Nam Coffee, green 2012   1.260463       0.572600  2.20
+188 Viet Nam Coffee, green 2011   1.276506       0.543865  2.35
+189 Viet Nam Coffee, green 2010   1.105700       0.511900  2.16</code></pre>
 </div>
 </div>
 </section>
@@ -378,7 +387,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="3.2" class="anchored" data-anchor-id="vẽ-đồ-thị-đường-linechart"><span class="header-section-number">3.2</span> Vẽ đồ thị đường (linechart)</h2>
 <p><strong>Thông số mặc định</strong></p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(production <span class="sc">~</span> year, </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> coffee_vn_2010_2021,</span>
@@ -405,13 +414,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>     <span class="at">pos =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>Tăng số lượng tick label</strong></p>
 <p><code>https://www.sthda.com/english/wiki/add-custom-tick-mark-labels-to-a-plot-in-r-software</code></p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(production <span class="sc">~</span> year, </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> coffee_vn_2010_2021,</span>
@@ -445,12 +458,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>     <span class="at">pos =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>Xoay tick label</strong></p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(production <span class="sc">~</span> year, </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> coffee_vn_2010_2021,</span>
@@ -486,12 +503,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>     <span class="at">xpd =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>Vẽ 2 đường linechart</strong></p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>coffee_all <span class="sc">|&gt;</span> <span class="fu">subset</span>(area <span class="sc">==</span> <span class="st">"Indonesia"</span>) <span class="ot">-&gt;</span> coffee_indo</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -505,41 +526,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         area          item year production area_harvested yield
-184 Indonesia Coffee, green 2021   0.765415       1.249615  0.61
-185 Indonesia Coffee, green 2020   0.762380       1.250452  0.61
-186 Indonesia Coffee, green 2019   0.752512       1.245359  0.60
-187 Indonesia Coffee, green 2018   0.756051       1.252826  0.60
-188 Indonesia Coffee, green 2017   0.717962       1.238598  0.58
-189 Indonesia Coffee, green 2016   0.639305       1.228512  0.52
-190 Indonesia Coffee, green 2015   0.639412       1.230001  0.52
-191 Indonesia Coffee, green 2014   0.643900       1.230500  0.52
-192 Indonesia Coffee, green 2013   0.675800       1.241700  0.54
-193 Indonesia Coffee, green 2012   0.691163       1.233900  0.56
-194 Indonesia Coffee, green 2011   0.638600       1.293000  0.49
-195 Indonesia Coffee, green 2010   0.684076       1.268476  0.54</code></pre>
+239 Indonesia Coffee, green 2021   0.765415       1.249615  0.61
+240 Indonesia Coffee, green 2020   0.762380       1.250452  0.61
+241 Indonesia Coffee, green 2019   0.752512       1.245359  0.60
+242 Indonesia Coffee, green 2018   0.756051       1.252826  0.60
+243 Indonesia Coffee, green 2017   0.717962       1.238598  0.58
+244 Indonesia Coffee, green 2016   0.639305       1.228512  0.52
+245 Indonesia Coffee, green 2015   0.639412       1.230001  0.52
+246 Indonesia Coffee, green 2014   0.643900       1.230500  0.52
+247 Indonesia Coffee, green 2013   0.675800       1.241700  0.54
+248 Indonesia Coffee, green 2012   0.691163       1.233900  0.56
+249 Indonesia Coffee, green 2011   0.638600       1.293000  0.49
+250 Indonesia Coffee, green 2010   0.684076       1.268476  0.54</code></pre>
 </div>
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>coffee_vn_2010_2021</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>        area          item year production area_harvested yield
-123 Viet Nam Coffee, green 2021   1.845033       0.653192  2.82
-124 Viet Nam Coffee, green 2020   1.763476       0.637563  2.77
-125 Viet Nam Coffee, green 2019   1.686765       0.624100  2.70
-126 Viet Nam Coffee, green 2018   1.616307       0.618879  2.61
-127 Viet Nam Coffee, green 2017   1.542398       0.605178  2.55
-128 Viet Nam Coffee, green 2016   1.460800       0.597597  2.44
-129 Viet Nam Coffee, green 2015   1.452999       0.593800  2.45
-130 Viet Nam Coffee, green 2014   1.406469       0.589041  2.39
-131 Viet Nam Coffee, green 2013   1.326688       0.581381  2.28
-132 Viet Nam Coffee, green 2012   1.260463       0.572600  2.20
-133 Viet Nam Coffee, green 2011   1.276506       0.543865  2.35
-134 Viet Nam Coffee, green 2010   1.105700       0.511900  2.16</code></pre>
+178 Viet Nam Coffee, green 2021   1.845033       0.653192  2.82
+179 Viet Nam Coffee, green 2020   1.763476       0.637563  2.77
+180 Viet Nam Coffee, green 2019   1.686765       0.624100  2.70
+181 Viet Nam Coffee, green 2018   1.616307       0.618879  2.61
+182 Viet Nam Coffee, green 2017   1.542398       0.605178  2.55
+183 Viet Nam Coffee, green 2016   1.460800       0.597597  2.44
+184 Viet Nam Coffee, green 2015   1.452999       0.593800  2.45
+185 Viet Nam Coffee, green 2014   1.406469       0.589041  2.39
+186 Viet Nam Coffee, green 2013   1.326688       0.581381  2.28
+187 Viet Nam Coffee, green 2012   1.260463       0.572600  2.20
+188 Viet Nam Coffee, green 2011   1.276506       0.543865  2.35
+189 Viet Nam Coffee, green 2010   1.105700       0.511900  2.16</code></pre>
 </div>
 </div>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## dataset coffee_vn_2010_2021</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(production <span class="sc">~</span> year, </span>
@@ -599,13 +620,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>     <span class="at">pos =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>Thay đổi vị trí legend</strong></p>
 <p><strong>Cách 1: Lấy tọa độ từ legend có sẵn</strong></p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(production <span class="sc">~</span> year, </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> coffee_vn_2010_2021,</span>
@@ -684,12 +709,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> (<span class="dv">2021</span> <span class="sc">+</span> <span class="dv">2010</span>) <span class="sc">/</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"purple"</span>, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">xpd =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>Cách 2: Dùng tham số <code>xjust</code> và <code>yjust</code> trong lệnh <code>legend()</code></strong></p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(production <span class="sc">~</span> year, </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> coffee_vn_2010_2021,</span>
@@ -761,15 +790,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a>     <span class="at">pos =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
 </div>
-<details>
+</div>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># abline(v = (2022 + 2009) / 2, col = "purple", lty = 2, xpd = TRUE)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">2</span>))</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -870,9 +903,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.raster</span>(logor, <span class="at">x =</span> <span class="fl">0.92</span>, <span class="at">y =</span> <span class="fl">0.08</span>, <span class="at">width =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
 </div>
-<details>
+</div>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.jumpingrivers.com/blog/r-knitr-markdown-png-pdf-graphics/</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://yihui.org/knitr/options/#plots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -882,7 +919,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="customize-thêm-cho-linechart" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="customize-thêm-cho-linechart"><span class="header-section-number">3.3</span> Customize thêm cho linechart</h2>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">2</span>))</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -986,11 +1023,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.raster</span>(logor, <span class="at">x =</span> <span class="fl">0.92</span>, <span class="at">y =</span> <span class="fl">0.08</span>, <span class="at">width =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">2</span>))</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1113,15 +1154,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-119"><a href="#cb17-119" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.raster</span>(logor, <span class="at">x =</span> <span class="fl">0.92</span>, <span class="at">y =</span> <span class="fl">0.08</span>, <span class="at">width =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
 </div>
-<details>
+</div>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://r-charts.com/base-r/grid/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"#f7dba7"</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1250,15 +1295,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.raster</span>(logor, <span class="at">x =</span> <span class="fl">0.92</span>, <span class="at">y =</span> <span class="fl">0.08</span>, <span class="at">width =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
 </div>
-<details>
+</div>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://r-charts.com/base-r/grid/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"gray90"</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1411,15 +1460,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-149"><a href="#cb21-149" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.raster</span>(logor, <span class="at">x =</span> <span class="fl">0.92</span>, <span class="at">y =</span> <span class="fl">0.08</span>, <span class="at">width =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
 </div>
-<details>
+</div>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.statology.org/label-scatterplot-points-r/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"#fefc97"</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1572,7 +1625,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb23-149"><a href="#cb23-149" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.raster</span>(logor, <span class="at">x =</span> <span class="fl">0.92</span>, <span class="at">y =</span> <span class="fl">0.08</span>, <span class="at">width =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="768"></p>
+<div>
+<figure class="figure">
+<p><img src="tinh-huong-base-r-graphics-thuong-gap_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -1659,10 +1716,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1672,8 +1728,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1686,6 +1751,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1729,6 +1908,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1754,6 +1934,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1815,17 +2021,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./huong-dan-cach-thay-doi-do-rong-cot-trong-barplot.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn cách thay đổi độ rộng cột trong barplot</strong></span></span>
+      <a href="./huong-dan-cach-thay-doi-do-rong-cot-trong-barplot.html" class="pagination-link  aria-label=" &lt;span="" dẫn="" cách="" thay="" đổi="" độ="" rộng="" cột="" trong="" barplot&lt;="" b&gt;&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách thay đổi độ rộng cột trong barplot</b></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./huong-dan-ve-do-thi-nhieu-truc-y.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Hướng dẫn vẽ đồ thị nhiều trục Y</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./huong-dan-ve-do-thi-nhieu-truc-y.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'><b>Hướng dẫn vẽ đồ thị nhiều trục Y</b></span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị nhiều trục Y</b></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
