@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 8&nbsp; Phân tích ANOVA 2 yếu tố trong R</title>
+<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 9&nbsp; Phân tích ANOVA 2 yếu tố trong R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./phan-tich-anova-2-yeu-to-trong-r.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./phan-tich-anova-2-yeu-to-trong-r.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -215,6 +215,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị bằng package <code>lattice</code></b></span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -229,79 +235,85 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khoang-tin-cay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-phan-tich-t-test-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phan-tich-anova-2-yeu-to-trong-r.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./so-sanh-ket-qua-giua-parametric-va-non-parametric-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phan-tich-ancova-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><b>Phân tích ANCOVA trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><b>Phân tích ANCOVA trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cac-lenh-r-thuong-dung-khi-thuc-hien-thong-ke-mo-ta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><b>Các lệnh R thường dùng khi thực hiện thống kê mô tả</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><b>Các lệnh R thường dùng khi thực hiện thống kê mô tả</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quy-trinh-phan-tich-logistic-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><b>Quy trình phân tích logistic regression</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><b>Quy trình phân tích logistic regression</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khai-niem-bootstrap-qua-vi-du-tinh-trung-binh-mau.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><b>Khái niệm về bootstrap qua ví dụ tính trung bình mẫu</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><b>Khái niệm về bootstrap qua ví dụ tính trung bình mẫu</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bo-tri-thi-nghiem-toi-uu-hoa-bang-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><b>Bố trí thí nghiệm tối ưu hóa bằng R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title"><b>Bố trí thí nghiệm tối ưu hóa bằng R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./workflow-phan-tich-thong-ke-qua-dataset-iris.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title"><b>Workflow phân tích thống kê qua dataset <code>iris</code> </b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title"><b>Workflow phân tích thống kê qua dataset <code>iris</code> </b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./example-partial-least-squares-and-principal-component-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title"><b>Example for Partial Least Squares and Principal Component Regression</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title"><b>Example for Partial Least Squares and Principal Component Regression</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quy-cach-ghi-ky-hieu-toan-hoc-trong-cong-thuc-xac-suat-thong-ke.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title"><b>Quy cách ghi ký hiệu toán học trong công thức xác suất thống kê</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title"><b>Quy cách ghi ký hiệu toán học trong công thức xác suất thống kê</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tai-lieu-phan-tich-pca.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title"><b>Tài liệu phân tích PCA</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><b>Tài liệu phân tích PCA</b></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./xay-dung-mo-hinh-GAM-trong-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title"><b>Xây dựng mô hình GAM trong R</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -318,25 +330,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-cach-lam-tron-so-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-show-all-data-tren-console.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn show all data trên console</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn show all data trên console</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ky-thuat-reshape-du-lieu.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật reshape dữ liệu</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật reshape dữ liệu</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -356,9 +368,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./phan-tich-anova-2-yeu-to-trong-r.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./phan-tich-anova-2-yeu-to-trong-r.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></h1>
 </div>
 
 
@@ -376,8 +388,8 @@ window.Quarto = {
 
 
 <p><strong>Câu hỏi nghiên cứu: Xác định tổ hợp giữa cơ chất và vi sinh vật để thu được hoạt tính enzyme cao</strong></p>
-<section id="bước-1-import-dữ-liệu" class="level3" data-number="8.0.1">
-<h3 data-number="8.0.1" class="anchored" data-anchor-id="bước-1-import-dữ-liệu"><span class="header-section-number">8.0.1</span> <span style="color:blue">Bước 1: Import dữ liệu</span></h3>
+<section id="bước-1-import-dữ-liệu" class="level3" data-number="9.0.1">
+<h3 data-number="9.0.1" class="anchored" data-anchor-id="bước-1-import-dữ-liệu"><span class="header-section-number">9.0.1</span> <span style="color:blue">Bước 1: Import dữ liệu</span></h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -466,8 +478,8 @@ window.Quarto = {
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>enzyme_df<span class="sc">$</span>bacillus <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(enzyme_df<span class="sc">$</span>bacillus)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="bước-2-giả-thuyết-cho-anova-2-yếu-tố" class="level3" data-number="8.0.2">
-<h3 data-number="8.0.2" class="anchored" data-anchor-id="bước-2-giả-thuyết-cho-anova-2-yếu-tố"><span class="header-section-number">8.0.2</span> <span style="color:blue">Bước 2: Giả thuyết cho ANOVA 2 yếu tố</span></h3>
+<section id="bước-2-giả-thuyết-cho-anova-2-yếu-tố" class="level3" data-number="9.0.2">
+<h3 data-number="9.0.2" class="anchored" data-anchor-id="bước-2-giả-thuyết-cho-anova-2-yếu-tố"><span class="header-section-number">9.0.2</span> <span style="color:blue">Bước 2: Giả thuyết cho ANOVA 2 yếu tố</span></h3>
 <p>Nguồn: <a href="https://statistics.laerd.com/spss-tutorials/two-way-anova-using-spss-statistics.php" class="uri">https://statistics.laerd.com/spss-tutorials/two-way-anova-using-spss-statistics.php</a></p>
 <ul>
 <li><p>Assumption #1: Your dependent variable should be measured at the continuous level <span class="math inline">\(\Rightarrow\)</span> <mark style="background-color: #FFFF00">OK</mark></p></li>
@@ -478,10 +490,10 @@ window.Quarto = {
 <li><p>Assumption #6: There needs to be homogeneity of variances for each combination of the groups of the two independent variables. Again, whilst this sounds a little tricky, you can easily test this assumption in SPSS Statistics using Levene’s test for homogeneity of variances.</p></li>
 </ul>
 </section>
-<section id="bước-3-kiểm-tra-giả-thuyết-cho-anova" class="level3" data-number="8.0.3">
-<h3 data-number="8.0.3" class="anchored" data-anchor-id="bước-3-kiểm-tra-giả-thuyết-cho-anova"><span class="header-section-number">8.0.3</span> <span style="color:blue">Bước 3: Kiểm tra giả thuyết cho ANOVA</span></h3>
-<section id="bước-3.1-kiểm-tra-giả-thuyết-assumption-5-normally-distributed-for-each-combination-of-the-groups" class="level4" data-number="8.0.3.1">
-<h4 data-number="8.0.3.1" class="anchored" data-anchor-id="bước-3.1-kiểm-tra-giả-thuyết-assumption-5-normally-distributed-for-each-combination-of-the-groups"><span class="header-section-number">8.0.3.1</span> <strong><span style="color:red">Bước 3.1: Kiểm tra giả thuyết Assumption #5 normally distributed for each combination of the groups</span></strong></h4>
+<section id="bước-3-kiểm-tra-giả-thuyết-cho-anova" class="level3" data-number="9.0.3">
+<h3 data-number="9.0.3" class="anchored" data-anchor-id="bước-3-kiểm-tra-giả-thuyết-cho-anova"><span class="header-section-number">9.0.3</span> <span style="color:blue">Bước 3: Kiểm tra giả thuyết cho ANOVA</span></h3>
+<section id="bước-3.1-kiểm-tra-giả-thuyết-assumption-5-normally-distributed-for-each-combination-of-the-groups" class="level4" data-number="9.0.3.1">
+<h4 data-number="9.0.3.1" class="anchored" data-anchor-id="bước-3.1-kiểm-tra-giả-thuyết-assumption-5-normally-distributed-for-each-combination-of-the-groups"><span class="header-section-number">9.0.3.1</span> <strong><span style="color:red">Bước 3.1: Kiểm tra giả thuyết Assumption #5 normally distributed for each combination of the groups</span></strong></h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute two-way ANOVA test with interaction effect</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>res.aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(enzyme <span class="sc">~</span> substrate <span class="sc">*</span> bacillus, <span class="at">data =</span> enzyme_df)</span>
@@ -502,8 +514,8 @@ W = 0.96772, p-value = 0.1127</code></pre>
 </blockquote>
 <p><strong><mark style="background-color: #FFFF00">Tóm lại trong Shapiro–Wilk test thì p-value nhỏ hơn 0.05 thì KHÔNG có phân bố chuẩn (do đó vi phạm giả thuyết). p-value lớn hơn 0.05 thì CÓ phân bố chuẩn.</mark></strong></p>
 </section>
-<section id="bước-3.2-kiểm-tra-giả-thuyết-assumption-6-homogeneity-of-variances" class="level4" data-number="8.0.3.2">
-<h4 data-number="8.0.3.2" class="anchored" data-anchor-id="bước-3.2-kiểm-tra-giả-thuyết-assumption-6-homogeneity-of-variances"><span class="header-section-number">8.0.3.2</span> <strong><span style="color:red">Bước 3.2: Kiểm tra giả thuyết Assumption #6 homogeneity of variances</span></strong></h4>
+<section id="bước-3.2-kiểm-tra-giả-thuyết-assumption-6-homogeneity-of-variances" class="level4" data-number="9.0.3.2">
+<h4 data-number="9.0.3.2" class="anchored" data-anchor-id="bước-3.2-kiểm-tra-giả-thuyết-assumption-6-homogeneity-of-variances"><span class="header-section-number">9.0.3.2</span> <strong><span style="color:red">Bước 3.2: Kiểm tra giả thuyết Assumption #6 homogeneity of variances</span></strong></h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(enzyme <span class="sc">~</span> substrate <span class="sc">*</span> bacillus, <span class="at">data =</span> enzyme_df) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -521,8 +533,8 @@ group 19  0.6694 0.8254
 </blockquote>
 <p><strong><mark style="background-color: #FFFF00">Tóm lại trong Levene’s test thì p-value nhỏ hơn 0.05 thì CÓ sự khác biệt về phương sai giữa các tổ hợp yếu tố (do đó vi phạm giả thuyết). p-value lớn hơn 0.05 thì KHÔNG CÓ sự khác biệt về phương sai giữa các tổ hợp các mức của 2 yếu tố.</mark></strong></p>
 </section>
-<section id="bước-3.3-kiểm-tra-giả-thuyết-assumption-4-kiểm-tra-outlier" class="level4" data-number="8.0.3.3">
-<h4 data-number="8.0.3.3" class="anchored" data-anchor-id="bước-3.3-kiểm-tra-giả-thuyết-assumption-4-kiểm-tra-outlier"><span class="header-section-number">8.0.3.3</span> <strong><span style="color:red">Bước 3.3: Kiểm tra giả thuyết Assumption #4 kiểm tra outlier</span></strong></h4>
+<section id="bước-3.3-kiểm-tra-giả-thuyết-assumption-4-kiểm-tra-outlier" class="level4" data-number="9.0.3.3">
+<h4 data-number="9.0.3.3" class="anchored" data-anchor-id="bước-3.3-kiểm-tra-giả-thuyết-assumption-4-kiểm-tra-outlier"><span class="header-section-number">9.0.3.3</span> <strong><span style="color:red">Bước 3.3: Kiểm tra giả thuyết Assumption #4 kiểm tra outlier</span></strong></h4>
 <p>Có nhiều phương pháp để detect outliers trong dataset.</p>
 <p><strong>Cách 1: Multivariate Model Approach - Cook’s Distance</strong></p>
 <div class="cell">
@@ -679,8 +691,8 @@ group 19  0.6694 0.8254
 </div>
 </section>
 </section>
-<section id="bước-4-kiểm-tra-đặc-điểm-dữ-liệu" class="level3" data-number="8.0.4">
-<h3 data-number="8.0.4" class="anchored" data-anchor-id="bước-4-kiểm-tra-đặc-điểm-dữ-liệu"><span class="header-section-number">8.0.4</span> <span style="color:blue">Bước 4: Kiểm tra đặc điểm dữ liệu</span></h3>
+<section id="bước-4-kiểm-tra-đặc-điểm-dữ-liệu" class="level3" data-number="9.0.4">
+<h3 data-number="9.0.4" class="anchored" data-anchor-id="bước-4-kiểm-tra-đặc-điểm-dữ-liệu"><span class="header-section-number">9.0.4</span> <span style="color:blue">Bước 4: Kiểm tra đặc điểm dữ liệu</span></h3>
 <p><strong>Histogram theo các mức trong <code>substrate</code></strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lattice)</span>
@@ -794,8 +806,8 @@ group 19  0.6694 0.8254
 </div>
 </div>
 </section>
-<section id="bước-5-phân-tích-anova-2-yếu-tố-crd" class="level3" data-number="8.0.5">
-<h3 data-number="8.0.5" class="anchored" data-anchor-id="bước-5-phân-tích-anova-2-yếu-tố-crd"><span class="header-section-number">8.0.5</span> <span style="color:blue">Bước 5: Phân tích ANOVA 2 yếu tố CRD</span></h3>
+<section id="bước-5-phân-tích-anova-2-yếu-tố-crd" class="level3" data-number="9.0.5">
+<h3 data-number="9.0.5" class="anchored" data-anchor-id="bước-5-phân-tích-anova-2-yếu-tố-crd"><span class="header-section-number">9.0.5</span> <span style="color:blue">Bước 5: Phân tích ANOVA 2 yếu tố CRD</span></h3>
 <p><strong>Tính p-value</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute two-way ANOVA test</span></span>
@@ -843,48 +855,27 @@ Mean Square Error:  30.16264
 
 substrate:bacillus,  means and individual ( 95 %) CI
 
-                   enzyme       std r       se       LCL      UCL     Min
-substrate_a:AB12 28.70833 3.2384490 3 3.170838 22.345581 35.07109 26.4125
-substrate_a:CD47 31.67083 1.2577468 3 3.170838 25.308081 38.03359 30.2250
-substrate_a:ER12 38.54167 2.1126972 3 3.170838 32.178914 44.90442 36.1750
-substrate_a:MS16 34.91667 1.3123413 3 3.170838 28.553914 41.27942 33.5375
-substrate_b:AB12 11.22083 2.0056301 3 3.170838  4.858081 17.58359  8.9500
-substrate_b:CD47 10.14583 0.2905634 3 3.170838  3.783081 16.50859  9.9250
-substrate_b:ER12 15.32083 0.6805711 3 3.170838  8.958081 21.68359 14.7250
-substrate_b:MS16 18.87917 2.4626058 3 3.170838 12.516414 25.24192 16.5250
-substrate_c:AB12 24.44583 1.3394456 3 3.170838 18.083081 30.80859 23.2000
-substrate_c:CD47 17.70000 2.1391806 3 3.170838 11.337248 24.06275 15.4625
-substrate_c:ER12 21.14167 0.8331354 3 3.170838 14.778914 27.50442 20.1875
-substrate_c:MS16 25.78333 0.7496180 3 3.170838 19.420581 32.14609 25.1875
-substrate_d:AB12 47.27500 1.1937991 3 3.170838 40.912248 53.63775 45.9125
-substrate_d:CD47 24.79167 0.7073645 3 3.170838 18.428914 31.15442 24.0625
-substrate_d:ER12 52.95417 0.3312697 3 3.170838 46.591414 59.31692 52.5750
-substrate_d:MS16 42.43750 1.7193294 3 3.170838 36.074748 48.80025 40.4625
-substrate_e:AB12 43.57083 1.1142776 3 3.170838 37.208081 49.93359 42.3875
-substrate_e:CD47 22.12083 0.5511824 3 3.170838 15.758081 28.48359 21.5500
-substrate_e:ER12 45.24167 0.4924958 3 3.170838 38.878914 51.60442 44.7000
-substrate_e:MS16 52.78750 0.3269174 3 3.170838 46.424748 59.15025 52.4125
-                     Max      Q25     Q50      Q75
-substrate_a:AB12 32.4125 26.85625 27.3000 29.85625
-substrate_a:CD47 32.5125 31.25000 32.2750 32.39375
-substrate_a:ER12 40.2375 37.69375 39.2125 39.72500
-substrate_a:MS16 36.1500 34.30000 35.0625 35.60625
-substrate_b:AB12 12.7500 10.45625 11.9625 12.35625
-substrate_b:CD47 10.4750  9.98125 10.0375 10.25625
-substrate_b:ER12 16.0625 14.95000 15.1750 15.61875
-substrate_b:MS16 21.4375 17.60000 18.6750 20.05625
-substrate_c:AB12 25.8625 23.73750 24.2750 25.06875
-substrate_c:CD47 19.7250 16.68750 17.9125 18.81875
-substrate_c:ER12 21.7250 20.85000 21.5125 21.61875
-substrate_c:MS16 26.6250 25.36250 25.5375 26.08125
-substrate_d:AB12 48.1375 46.84375 47.7750 47.95625
-substrate_d:CD47 25.4750 24.45000 24.8375 25.15625
-substrate_d:ER12 53.1875 52.83750 53.1000 53.14375
-substrate_d:MS16 43.6000 41.85625 43.2500 43.42500
-substrate_e:AB12 44.6000 43.05625 43.7250 44.16250
-substrate_e:CD47 22.6500 21.85625 22.1625 22.40625
-substrate_e:ER12 45.6625 45.03125 45.3625 45.51250
-substrate_e:MS16 53.0125 52.67500 52.9375 52.97500
+                   enzyme       std r       se       LCL      UCL     Min     Max      Q25     Q50      Q75
+substrate_a:AB12 28.70833 3.2384490 3 3.170838 22.345581 35.07109 26.4125 32.4125 26.85625 27.3000 29.85625
+substrate_a:CD47 31.67083 1.2577468 3 3.170838 25.308081 38.03359 30.2250 32.5125 31.25000 32.2750 32.39375
+substrate_a:ER12 38.54167 2.1126972 3 3.170838 32.178914 44.90442 36.1750 40.2375 37.69375 39.2125 39.72500
+substrate_a:MS16 34.91667 1.3123413 3 3.170838 28.553914 41.27942 33.5375 36.1500 34.30000 35.0625 35.60625
+substrate_b:AB12 11.22083 2.0056301 3 3.170838  4.858081 17.58359  8.9500 12.7500 10.45625 11.9625 12.35625
+substrate_b:CD47 10.14583 0.2905634 3 3.170838  3.783081 16.50859  9.9250 10.4750  9.98125 10.0375 10.25625
+substrate_b:ER12 15.32083 0.6805711 3 3.170838  8.958081 21.68359 14.7250 16.0625 14.95000 15.1750 15.61875
+substrate_b:MS16 18.87917 2.4626058 3 3.170838 12.516414 25.24192 16.5250 21.4375 17.60000 18.6750 20.05625
+substrate_c:AB12 24.44583 1.3394456 3 3.170838 18.083081 30.80859 23.2000 25.8625 23.73750 24.2750 25.06875
+substrate_c:CD47 17.70000 2.1391806 3 3.170838 11.337248 24.06275 15.4625 19.7250 16.68750 17.9125 18.81875
+substrate_c:ER12 21.14167 0.8331354 3 3.170838 14.778914 27.50442 20.1875 21.7250 20.85000 21.5125 21.61875
+substrate_c:MS16 25.78333 0.7496180 3 3.170838 19.420581 32.14609 25.1875 26.6250 25.36250 25.5375 26.08125
+substrate_d:AB12 47.27500 1.1937991 3 3.170838 40.912248 53.63775 45.9125 48.1375 46.84375 47.7750 47.95625
+substrate_d:CD47 24.79167 0.7073645 3 3.170838 18.428914 31.15442 24.0625 25.4750 24.45000 24.8375 25.15625
+substrate_d:ER12 52.95417 0.3312697 3 3.170838 46.591414 59.31692 52.5750 53.1875 52.83750 53.1000 53.14375
+substrate_d:MS16 42.43750 1.7193294 3 3.170838 36.074748 48.80025 40.4625 43.6000 41.85625 43.2500 43.42500
+substrate_e:AB12 43.57083 1.1142776 3 3.170838 37.208081 49.93359 42.3875 44.6000 43.05625 43.7250 44.16250
+substrate_e:CD47 22.12083 0.5511824 3 3.170838 15.758081 28.48359 21.5500 22.6500 21.85625 22.1625 22.40625
+substrate_e:ER12 45.24167 0.4924958 3 3.170838 38.878914 51.60442 44.7000 45.6625 45.03125 45.3625 45.51250
+substrate_e:MS16 52.78750 0.3269174 3 3.170838 46.424748 59.15025 52.4125 53.0125 52.67500 52.9375 52.97500
 
 Alpha: 0.05 ; DF Error: 52
 Critical Value of t: 2.006647 
@@ -927,58 +918,33 @@ Mean Square Error:  30.16264
 
 substrate:bacillus,  means
 
-                   enzyme       std r       se     Min     Max      Q25     Q50
-substrate_a:AB12 28.70833 3.2384490 3 3.170838 26.4125 32.4125 26.85625 27.3000
-substrate_a:CD47 31.67083 1.2577468 3 3.170838 30.2250 32.5125 31.25000 32.2750
-substrate_a:ER12 38.54167 2.1126972 3 3.170838 36.1750 40.2375 37.69375 39.2125
-substrate_a:MS16 34.91667 1.3123413 3 3.170838 33.5375 36.1500 34.30000 35.0625
-substrate_b:AB12 11.22083 2.0056301 3 3.170838  8.9500 12.7500 10.45625 11.9625
-substrate_b:CD47 10.14583 0.2905634 3 3.170838  9.9250 10.4750  9.98125 10.0375
-substrate_b:ER12 15.32083 0.6805711 3 3.170838 14.7250 16.0625 14.95000 15.1750
-substrate_b:MS16 18.87917 2.4626058 3 3.170838 16.5250 21.4375 17.60000 18.6750
-substrate_c:AB12 24.44583 1.3394456 3 3.170838 23.2000 25.8625 23.73750 24.2750
-substrate_c:CD47 17.70000 2.1391806 3 3.170838 15.4625 19.7250 16.68750 17.9125
-substrate_c:ER12 21.14167 0.8331354 3 3.170838 20.1875 21.7250 20.85000 21.5125
-substrate_c:MS16 25.78333 0.7496180 3 3.170838 25.1875 26.6250 25.36250 25.5375
-substrate_d:AB12 47.27500 1.1937991 3 3.170838 45.9125 48.1375 46.84375 47.7750
-substrate_d:CD47 24.79167 0.7073645 3 3.170838 24.0625 25.4750 24.45000 24.8375
-substrate_d:ER12 52.95417 0.3312697 3 3.170838 52.5750 53.1875 52.83750 53.1000
-substrate_d:MS16 42.43750 1.7193294 3 3.170838 40.4625 43.6000 41.85625 43.2500
-substrate_e:AB12 43.57083 1.1142776 3 3.170838 42.3875 44.6000 43.05625 43.7250
-substrate_e:CD47 22.12083 0.5511824 3 3.170838 21.5500 22.6500 21.85625 22.1625
-substrate_e:ER12 45.24167 0.4924958 3 3.170838 44.7000 45.6625 45.03125 45.3625
-substrate_e:MS16 52.78750 0.3269174 3 3.170838 52.4125 53.0125 52.67500 52.9375
-                      Q75
-substrate_a:AB12 29.85625
-substrate_a:CD47 32.39375
-substrate_a:ER12 39.72500
-substrate_a:MS16 35.60625
-substrate_b:AB12 12.35625
-substrate_b:CD47 10.25625
-substrate_b:ER12 15.61875
-substrate_b:MS16 20.05625
-substrate_c:AB12 25.06875
-substrate_c:CD47 18.81875
-substrate_c:ER12 21.61875
-substrate_c:MS16 26.08125
-substrate_d:AB12 47.95625
-substrate_d:CD47 25.15625
-substrate_d:ER12 53.14375
-substrate_d:MS16 43.42500
-substrate_e:AB12 44.16250
-substrate_e:CD47 22.40625
-substrate_e:ER12 45.51250
-substrate_e:MS16 52.97500
+                   enzyme       std r       se     Min     Max      Q25     Q50      Q75
+substrate_a:AB12 28.70833 3.2384490 3 3.170838 26.4125 32.4125 26.85625 27.3000 29.85625
+substrate_a:CD47 31.67083 1.2577468 3 3.170838 30.2250 32.5125 31.25000 32.2750 32.39375
+substrate_a:ER12 38.54167 2.1126972 3 3.170838 36.1750 40.2375 37.69375 39.2125 39.72500
+substrate_a:MS16 34.91667 1.3123413 3 3.170838 33.5375 36.1500 34.30000 35.0625 35.60625
+substrate_b:AB12 11.22083 2.0056301 3 3.170838  8.9500 12.7500 10.45625 11.9625 12.35625
+substrate_b:CD47 10.14583 0.2905634 3 3.170838  9.9250 10.4750  9.98125 10.0375 10.25625
+substrate_b:ER12 15.32083 0.6805711 3 3.170838 14.7250 16.0625 14.95000 15.1750 15.61875
+substrate_b:MS16 18.87917 2.4626058 3 3.170838 16.5250 21.4375 17.60000 18.6750 20.05625
+substrate_c:AB12 24.44583 1.3394456 3 3.170838 23.2000 25.8625 23.73750 24.2750 25.06875
+substrate_c:CD47 17.70000 2.1391806 3 3.170838 15.4625 19.7250 16.68750 17.9125 18.81875
+substrate_c:ER12 21.14167 0.8331354 3 3.170838 20.1875 21.7250 20.85000 21.5125 21.61875
+substrate_c:MS16 25.78333 0.7496180 3 3.170838 25.1875 26.6250 25.36250 25.5375 26.08125
+substrate_d:AB12 47.27500 1.1937991 3 3.170838 45.9125 48.1375 46.84375 47.7750 47.95625
+substrate_d:CD47 24.79167 0.7073645 3 3.170838 24.0625 25.4750 24.45000 24.8375 25.15625
+substrate_d:ER12 52.95417 0.3312697 3 3.170838 52.5750 53.1875 52.83750 53.1000 53.14375
+substrate_d:MS16 42.43750 1.7193294 3 3.170838 40.4625 43.6000 41.85625 43.2500 43.42500
+substrate_e:AB12 43.57083 1.1142776 3 3.170838 42.3875 44.6000 43.05625 43.7250 44.16250
+substrate_e:CD47 22.12083 0.5511824 3 3.170838 21.5500 22.6500 21.85625 22.1625 22.40625
+substrate_e:ER12 45.24167 0.4924958 3 3.170838 44.7000 45.6625 45.03125 45.3625 45.51250
+substrate_e:MS16 52.78750 0.3269174 3 3.170838 52.4125 53.0125 52.67500 52.9375 52.97500
 
 Alpha: 0.05 ; DF Error: 52 
 
 Critical Range
-        2         3         4         5         6         7         8         9 
- 8.998291  9.464564  9.771386  9.993980 10.164993 10.301439 10.413258 10.506735 
-       10        11        12        13        14        15        16        17 
-10.586085 10.654261 10.713409 10.765131 10.810657 10.850946 10.886760 10.918716 
-       18        19        20 
-10.947317 10.972979 10.996050 
+        2         3         4         5         6         7         8         9        10        11        12        13        14        15        16        17        18        19        20 
+ 8.998291  9.464564  9.771386  9.993980 10.164993 10.301439 10.413258 10.506735 10.586085 10.654261 10.713409 10.765131 10.810657 10.850946 10.886760 10.918716 10.947317 10.972979 10.996050 
 
 Means with the same letter are not significantly different.
 
@@ -1015,48 +981,27 @@ Mean Square Error:  30.16264
 
 substrate:bacillus,  means
 
-                   enzyme       std r       se     Min     Max      Q25     Q50
-substrate_a:AB12 28.70833 3.2384490 3 3.170838 26.4125 32.4125 26.85625 27.3000
-substrate_a:CD47 31.67083 1.2577468 3 3.170838 30.2250 32.5125 31.25000 32.2750
-substrate_a:ER12 38.54167 2.1126972 3 3.170838 36.1750 40.2375 37.69375 39.2125
-substrate_a:MS16 34.91667 1.3123413 3 3.170838 33.5375 36.1500 34.30000 35.0625
-substrate_b:AB12 11.22083 2.0056301 3 3.170838  8.9500 12.7500 10.45625 11.9625
-substrate_b:CD47 10.14583 0.2905634 3 3.170838  9.9250 10.4750  9.98125 10.0375
-substrate_b:ER12 15.32083 0.6805711 3 3.170838 14.7250 16.0625 14.95000 15.1750
-substrate_b:MS16 18.87917 2.4626058 3 3.170838 16.5250 21.4375 17.60000 18.6750
-substrate_c:AB12 24.44583 1.3394456 3 3.170838 23.2000 25.8625 23.73750 24.2750
-substrate_c:CD47 17.70000 2.1391806 3 3.170838 15.4625 19.7250 16.68750 17.9125
-substrate_c:ER12 21.14167 0.8331354 3 3.170838 20.1875 21.7250 20.85000 21.5125
-substrate_c:MS16 25.78333 0.7496180 3 3.170838 25.1875 26.6250 25.36250 25.5375
-substrate_d:AB12 47.27500 1.1937991 3 3.170838 45.9125 48.1375 46.84375 47.7750
-substrate_d:CD47 24.79167 0.7073645 3 3.170838 24.0625 25.4750 24.45000 24.8375
-substrate_d:ER12 52.95417 0.3312697 3 3.170838 52.5750 53.1875 52.83750 53.1000
-substrate_d:MS16 42.43750 1.7193294 3 3.170838 40.4625 43.6000 41.85625 43.2500
-substrate_e:AB12 43.57083 1.1142776 3 3.170838 42.3875 44.6000 43.05625 43.7250
-substrate_e:CD47 22.12083 0.5511824 3 3.170838 21.5500 22.6500 21.85625 22.1625
-substrate_e:ER12 45.24167 0.4924958 3 3.170838 44.7000 45.6625 45.03125 45.3625
-substrate_e:MS16 52.78750 0.3269174 3 3.170838 52.4125 53.0125 52.67500 52.9375
-                      Q75
-substrate_a:AB12 29.85625
-substrate_a:CD47 32.39375
-substrate_a:ER12 39.72500
-substrate_a:MS16 35.60625
-substrate_b:AB12 12.35625
-substrate_b:CD47 10.25625
-substrate_b:ER12 15.61875
-substrate_b:MS16 20.05625
-substrate_c:AB12 25.06875
-substrate_c:CD47 18.81875
-substrate_c:ER12 21.61875
-substrate_c:MS16 26.08125
-substrate_d:AB12 47.95625
-substrate_d:CD47 25.15625
-substrate_d:ER12 53.14375
-substrate_d:MS16 43.42500
-substrate_e:AB12 44.16250
-substrate_e:CD47 22.40625
-substrate_e:ER12 45.51250
-substrate_e:MS16 52.97500
+                   enzyme       std r       se     Min     Max      Q25     Q50      Q75
+substrate_a:AB12 28.70833 3.2384490 3 3.170838 26.4125 32.4125 26.85625 27.3000 29.85625
+substrate_a:CD47 31.67083 1.2577468 3 3.170838 30.2250 32.5125 31.25000 32.2750 32.39375
+substrate_a:ER12 38.54167 2.1126972 3 3.170838 36.1750 40.2375 37.69375 39.2125 39.72500
+substrate_a:MS16 34.91667 1.3123413 3 3.170838 33.5375 36.1500 34.30000 35.0625 35.60625
+substrate_b:AB12 11.22083 2.0056301 3 3.170838  8.9500 12.7500 10.45625 11.9625 12.35625
+substrate_b:CD47 10.14583 0.2905634 3 3.170838  9.9250 10.4750  9.98125 10.0375 10.25625
+substrate_b:ER12 15.32083 0.6805711 3 3.170838 14.7250 16.0625 14.95000 15.1750 15.61875
+substrate_b:MS16 18.87917 2.4626058 3 3.170838 16.5250 21.4375 17.60000 18.6750 20.05625
+substrate_c:AB12 24.44583 1.3394456 3 3.170838 23.2000 25.8625 23.73750 24.2750 25.06875
+substrate_c:CD47 17.70000 2.1391806 3 3.170838 15.4625 19.7250 16.68750 17.9125 18.81875
+substrate_c:ER12 21.14167 0.8331354 3 3.170838 20.1875 21.7250 20.85000 21.5125 21.61875
+substrate_c:MS16 25.78333 0.7496180 3 3.170838 25.1875 26.6250 25.36250 25.5375 26.08125
+substrate_d:AB12 47.27500 1.1937991 3 3.170838 45.9125 48.1375 46.84375 47.7750 47.95625
+substrate_d:CD47 24.79167 0.7073645 3 3.170838 24.0625 25.4750 24.45000 24.8375 25.15625
+substrate_d:ER12 52.95417 0.3312697 3 3.170838 52.5750 53.1875 52.83750 53.1000 53.14375
+substrate_d:MS16 42.43750 1.7193294 3 3.170838 40.4625 43.6000 41.85625 43.2500 43.42500
+substrate_e:AB12 43.57083 1.1142776 3 3.170838 42.3875 44.6000 43.05625 43.7250 44.16250
+substrate_e:CD47 22.12083 0.5511824 3 3.170838 21.5500 22.6500 21.85625 22.1625 22.40625
+substrate_e:ER12 45.24167 0.4924958 3 3.170838 44.7000 45.6625 45.03125 45.3625 45.51250
+substrate_e:MS16 52.78750 0.3269174 3 3.170838 52.4125 53.0125 52.67500 52.9375 52.97500
 
 Alpha: 0.05 ; DF Error: 52 
 Critical Value of Studentized Range: 5.276872 
@@ -1088,8 +1033,8 @@ substrate_b:AB12 11.22083      h
 substrate_b:CD47 10.14583      h</code></pre>
 </div>
 </div>
-<section id="tài-liệu-tham-khảo" class="level4" data-number="8.0.5.1">
-<h4 data-number="8.0.5.1" class="anchored" data-anchor-id="tài-liệu-tham-khảo"><span class="header-section-number">8.0.5.1</span> Tài liệu tham khảo</h4>
+<section id="tài-liệu-tham-khảo" class="level4" data-number="9.0.5.1">
+<h4 data-number="9.0.5.1" class="anchored" data-anchor-id="tài-liệu-tham-khảo"><span class="header-section-number">9.0.5.1</span> Tài liệu tham khảo</h4>
 <ol type="1">
 <li><p><code>https://statsandr.com/blog/two-way-anova-in-r/</code></p></li>
 <li><p><a href="https://www.youtube.com/watch?v=Ctx8CcJdOB4">Analysis of a Two-Factor Completely Randomized Design in R</a></p></li>
@@ -1499,12 +1444,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
       <a href="./huong-dan-phan-tich-t-test-trong-r.html" class="pagination-link" aria-label="<b>Hướng dẫn phân tích t-test trong R</b>">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./so-sanh-ket-qua-giua-parametric-va-non-parametric-anova.html" class="pagination-link" aria-label="<b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b>">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

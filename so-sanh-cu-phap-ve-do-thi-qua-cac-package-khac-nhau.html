@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 22&nbsp; Hướng dẫn cách làm tròn số trong R</title>
+<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 6&nbsp; So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./huong-dan-show-all-data-tren-console.html" rel="next">
-<link href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html" rel="prev">
+<link href="./co-so-ly-thuyet.html" rel="next">
+<link href="./huong-dan-ve-do-thi-bang-package-lattice.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html">Kỹ thuật xử lý dữ liệu</a></li><li class="breadcrumb-item"><a href="./huong-dan-cach-lam-tron-so-trong-r.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cac-lenh-do-thi-can-ban-su-dung-base-r-graphics.html">Các lệnh đồ thị căn bản sử dụng Base R Graphics</a></li><li class="breadcrumb-item"><a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -188,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html" class="sidebar-item-text sidebar-link">
+  <a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></span></a>
   </div>
 </li>
@@ -306,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./huong-dan-cach-lam-tron-so-trong-r.html" class="sidebar-item-text sidebar-link active">
+  <a href="./huong-dan-cach-lam-tron-so-trong-r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></span></a>
   </div>
 </li>
@@ -339,9 +305,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html">Kỹ thuật xử lý dữ liệu</a></li><li class="breadcrumb-item"><a href="./huong-dan-cach-lam-tron-so-trong-r.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cac-lenh-do-thi-can-ban-su-dung-base-r-graphics.html">Các lệnh đồ thị căn bản sử dụng Base R Graphics</a></li><li class="breadcrumb-item"><a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></h1>
 </div>
 
 
@@ -358,64 +324,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Bài viết này làm rõ hơn cách làm tròn số trong R ở video <code>CÁCH LÀM TRÒN SỐ TRONG R | Lệnh round(), signif()</code> trong chuyên đề 1 <a href="https://www.tuhocr.com/r-courses/coding-in-r">Coding in R</a>.</p>
-<p>Giả sử bạn có vector <code>x</code> như sau. Khi in ra console thì mặc định sẽ có giá trị rất dài như bên dưới vì mặc định <code>digits = 7</code> và <code>scipen = 0</code> trong R đã thiết lập format khi in ra con số (numeric) có số lượng số sau dấu thập phân như vậy.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.8992877</span>, <span class="fl">0.023</span>, <span class="sc">-</span><span class="fl">1.002</span>, <span class="fl">1.236</span>, <span class="fl">10.236000</span>, <span class="fl">20.243</span>, <span class="fl">10035.23</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]     0.8992877     0.0230000    -1.0020000     1.2360000    10.2360000    20.2430000 10035.2300000</code></pre>
-</div>
-</div>
-<p>Bây giờ bạn muốn thu được vector numeric <code>x</code> chỉ gồm các con số có 2 số sau dấu thập phân thì ta sẽ áp dụng 1 trong các cách sau.</p>
-<p><span style="color:darkgreen"><strong>Cách 1: Sử dụng function <code>round()</code> trong base R, kết quả thu được là <span style="color:blue"><u>numeric vector</u></span></strong></span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(x, <span class="at">digits =</span> <span class="dv">2</span>) <span class="ot">-&gt;</span> x_1</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]     0.90     0.02    -1.00     1.24    10.24    20.24 10035.23</code></pre>
-</div>
-</div>
-<p><span style="color:darkgreen"><strong>Cách 2: Sử dụng function <code>sprintf()</code> trong base R, kết quả là <span style="color:red"><u>character vector</u></span></strong></span> <strong>do đó cần convert qua vector numeric nếu cần dùng để tính toán tiếp theo.</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">"%.2f"</span>, x) <span class="ot">-&gt;</span> x_2 </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "0.90"     "0.02"     "-1.00"    "1.24"     "10.24"    "20.24"    "10035.23"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(x_2) <span class="do">## convert qua dạng numeric vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]     0.90     0.02    -1.00     1.24    10.24    20.24 10035.23</code></pre>
-</div>
-</div>
-<p><span style="color:darkgreen"><strong>Cách 3: Sử dụng function <code>myround()</code> trong package <code>broman</code>, kết quả là <span style="color:red"><u>character vector</u></span></strong></span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broman)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>broman<span class="sc">::</span><span class="fu">myround</span>(x, <span class="at">digits =</span> <span class="dv">2</span>) <span class="ot">-&gt;</span> x_3</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>x_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "0.90"     "0.02"     "-1.00"    "1.24"     "10.24"    "20.24"    "10035.23"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(x_3) <span class="do">## convert qua dạng numeric vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]     0.90     0.02    -1.00     1.24    10.24    20.24 10035.23</code></pre>
-</div>
-</div>
-<p><strong><mark style="background-color: #FFFF00">Cả 3 cách này đều thu được kết quả y chang nhau.</mark></strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(x_1, <span class="fu">as.numeric</span>(x_2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(x_1, <span class="fu">as.numeric</span>(x_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="fu">as.numeric</span>(x_2), <span class="fu">as.numeric</span>(x_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
+<script type="text/javascript">
+window.location.replace("https://applyr.netlify.app/codebase/quarto-compare-plot/quarto-compare-plot.html");
+</script>
 
 
 
@@ -809,13 +720,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html" class="pagination-link" aria-label="<b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b>">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b></span></span>
+      <a href="./huong-dan-ve-do-thi-bang-package-lattice.html" class="pagination-link" aria-label="<b>Hướng dẫn vẽ đồ thị bằng package <code>lattice</code></b>">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị bằng package <code>lattice</code></b></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./huong-dan-show-all-data-tren-console.html" class="pagination-link" aria-label="<b>Hướng dẫn show all data trên console</b>">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn show all data trên console</b></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./co-so-ly-thuyet.html" class="pagination-link" aria-label="Cơ sở lý thuyết">
+        <span class="nav-page-text">Cơ sở lý thuyết</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

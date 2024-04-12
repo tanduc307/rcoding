@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 7&nbsp; Hướng dẫn phân tích t-test trong R</title>
+<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 8&nbsp; Hướng dẫn phân tích t-test trong R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./huong-dan-phan-tich-t-test-trong-r.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./huong-dan-phan-tich-t-test-trong-r.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -215,6 +215,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn vẽ đồ thị bằng package <code>lattice</code></b></span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -229,79 +235,85 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khoang-tin-cay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-phan-tich-t-test-trong-r.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phan-tich-anova-2-yeu-to-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./so-sanh-ket-qua-giua-parametric-va-non-parametric-anova.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><b>So sánh kết quả giữa phân tích parametric và non-parametric ANOVA</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phan-tich-ancova-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><b>Phân tích ANCOVA trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><b>Phân tích ANCOVA trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cac-lenh-r-thuong-dung-khi-thuc-hien-thong-ke-mo-ta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title"><b>Các lệnh R thường dùng khi thực hiện thống kê mô tả</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><b>Các lệnh R thường dùng khi thực hiện thống kê mô tả</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quy-trinh-phan-tich-logistic-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><b>Quy trình phân tích logistic regression</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><b>Quy trình phân tích logistic regression</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./khai-niem-bootstrap-qua-vi-du-tinh-trung-binh-mau.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><b>Khái niệm về bootstrap qua ví dụ tính trung bình mẫu</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><b>Khái niệm về bootstrap qua ví dụ tính trung bình mẫu</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bo-tri-thi-nghiem-toi-uu-hoa-bang-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><b>Bố trí thí nghiệm tối ưu hóa bằng R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title"><b>Bố trí thí nghiệm tối ưu hóa bằng R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./workflow-phan-tich-thong-ke-qua-dataset-iris.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title"><b>Workflow phân tích thống kê qua dataset <code>iris</code> </b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title"><b>Workflow phân tích thống kê qua dataset <code>iris</code> </b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./example-partial-least-squares-and-principal-component-regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title"><b>Example for Partial Least Squares and Principal Component Regression</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title"><b>Example for Partial Least Squares and Principal Component Regression</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quy-cach-ghi-ky-hieu-toan-hoc-trong-cong-thuc-xac-suat-thong-ke.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title"><b>Quy cách ghi ký hiệu toán học trong công thức xác suất thống kê</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title"><b>Quy cách ghi ký hiệu toán học trong công thức xác suất thống kê</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tai-lieu-phan-tich-pca.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title"><b>Tài liệu phân tích PCA</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><b>Tài liệu phân tích PCA</b></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./xay-dung-mo-hinh-GAM-trong-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title"><b>Xây dựng mô hình GAM trong R</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -318,25 +330,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn convert từ file <code>csv</code> qua <code>tsv</code> trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-cach-lam-tron-so-trong-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn cách làm tròn số trong R</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./huong-dan-show-all-data-tren-console.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn show all data trên console</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn show all data trên console</b></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ky-thuat-reshape-du-lieu.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật reshape dữ liệu</b></span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật reshape dữ liệu</b></span></span></a>
   </div>
 </li>
       </ul>
@@ -356,9 +368,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./huong-dan-phan-tich-t-test-trong-r.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li><li class="breadcrumb-item"><a href="./huong-dan-phan-tich-t-test-trong-r.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Hướng dẫn phân tích t-test trong R</b></span></h1>
 </div>
 
 
@@ -375,8 +387,8 @@ window.Quarto = {
 </header>
 
 
-<section id="bước-1-cơ-sở-lý-thuyết" class="level4" data-number="7.0.0.1">
-<h4 data-number="7.0.0.1" class="anchored" data-anchor-id="bước-1-cơ-sở-lý-thuyết"><span class="header-section-number">7.0.0.1</span> <span style="color:blue"><strong>Bước 1: Cơ sở lý thuyết</strong></span></h4>
+<section id="bước-1-cơ-sở-lý-thuyết" class="level4" data-number="8.0.0.1">
+<h4 data-number="8.0.0.1" class="anchored" data-anchor-id="bước-1-cơ-sở-lý-thuyết"><span class="header-section-number">8.0.0.1</span> <span style="color:blue"><strong>Bước 1: Cơ sở lý thuyết</strong></span></h4>
 <p><code>https://www.jmp.com/en_ch/statistics-knowledge-portal/t-test.html</code></p>
 <blockquote class="blockquote">
 <p><mark style="background-color: #FFFF00"><strong>What is a t-test?</strong></mark></p>
@@ -387,10 +399,10 @@ window.Quarto = {
 <p>You cannot use a t-test. Use a multiple comparison method. Examples are analysis of variance (ANOVA), Tukey-Kramer pairwise comparison, Dunnett’s comparison to a control, and analysis of means (ANOM).</p>
 </blockquote>
 </section>
-<section id="bước-2-đề-bài-về-so-sánh-hai-loài-hoa-qua-các-chỉ-tiêu-định-lượng-để-tìm-ra-sự-khác-biệt-bằng-kiểm-định-t-test" class="level4" data-number="7.0.0.2">
-<h4 data-number="7.0.0.2" class="anchored" data-anchor-id="bước-2-đề-bài-về-so-sánh-hai-loài-hoa-qua-các-chỉ-tiêu-định-lượng-để-tìm-ra-sự-khác-biệt-bằng-kiểm-định-t-test"><span class="header-section-number">7.0.0.2</span> <span style="color:blue"><strong>Bước 2: Đề bài về so sánh hai loài hoa qua các chỉ tiêu định lượng để tìm ra sự khác biệt bằng kiểm định t-test</strong></span></h4>
-<section id="bước-2.1-đặt-giả-thuyết-thống-kê-cho-kiểm-định-t-test-2-đuôi" class="level5" data-number="7.0.0.2.1">
-<h5 data-number="7.0.0.2.1" class="anchored" data-anchor-id="bước-2.1-đặt-giả-thuyết-thống-kê-cho-kiểm-định-t-test-2-đuôi"><span class="header-section-number">7.0.0.2.1</span> <span style="color:green"><strong>Bước 2.1: Đặt giả thuyết thống kê cho kiểm định t-test 2 đuôi</strong></span></h5>
+<section id="bước-2-đề-bài-về-so-sánh-hai-loài-hoa-qua-các-chỉ-tiêu-định-lượng-để-tìm-ra-sự-khác-biệt-bằng-kiểm-định-t-test" class="level4" data-number="8.0.0.2">
+<h4 data-number="8.0.0.2" class="anchored" data-anchor-id="bước-2-đề-bài-về-so-sánh-hai-loài-hoa-qua-các-chỉ-tiêu-định-lượng-để-tìm-ra-sự-khác-biệt-bằng-kiểm-định-t-test"><span class="header-section-number">8.0.0.2</span> <span style="color:blue"><strong>Bước 2: Đề bài về so sánh hai loài hoa qua các chỉ tiêu định lượng để tìm ra sự khác biệt bằng kiểm định t-test</strong></span></h4>
+<section id="bước-2.1-đặt-giả-thuyết-thống-kê-cho-kiểm-định-t-test-2-đuôi" class="level5" data-number="8.0.0.2.1">
+<h5 data-number="8.0.0.2.1" class="anchored" data-anchor-id="bước-2.1-đặt-giả-thuyết-thống-kê-cho-kiểm-định-t-test-2-đuôi"><span class="header-section-number">8.0.0.2.1</span> <span style="color:green"><strong>Bước 2.1: Đặt giả thuyết thống kê cho kiểm định t-test 2 đuôi</strong></span></h5>
 <ul>
 <li><p><span class="math inline">\({H_0}\)</span> : Trung bình tổng thể giữa hai mẫu <em>không khác nhau</em> về chỉ tiêu quan tâm <span class="math inline">\(\mu_1 = \mu_2\)</span></p></li>
 <li><p><span class="math inline">\({H_\alpha }\)</span> : Trung bình tổng thể giữa hai mẫu <em>khác nhau</em> về chỉ tiêu quan tâm <span class="math inline">\(\mu_1 \ne \mu_2\)</span></p></li>
@@ -454,8 +466,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="bước-2.2-thống-kê-mô-tả" class="level5" data-number="7.0.0.2.2">
-<h5 data-number="7.0.0.2.2" class="anchored" data-anchor-id="bước-2.2-thống-kê-mô-tả"><span class="header-section-number">7.0.0.2.2</span> <span style="color:green"><strong>Bước 2.2: Thống kê mô tả</strong></span></h5>
+<section id="bước-2.2-thống-kê-mô-tả" class="level5" data-number="8.0.0.2.2">
+<h5 data-number="8.0.0.2.2" class="anchored" data-anchor-id="bước-2.2-thống-kê-mô-tả"><span class="header-section-number">8.0.0.2.2</span> <span style="color:green"><strong>Bước 2.2: Thống kê mô tả</strong></span></h5>
 <p>Thực hiện cho 1 chỉ tiêu <code>LBL</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>flower  <span class="ot">&lt;-</span> flower[, <span class="sc">-</span><span class="dv">1</span>]</span>
@@ -623,8 +635,8 @@ $CLL
 </div>
 </section>
 </section>
-<section id="bước-3kiểm-tra-giả-thuyết-cho-t-test" class="level4" data-number="7.0.0.3">
-<h4 data-number="7.0.0.3" class="anchored" data-anchor-id="bước-3kiểm-tra-giả-thuyết-cho-t-test"><span class="header-section-number">7.0.0.3</span> <span style="color:blue"><strong>Bước 3:Kiểm tra giả thuyết cho t-test</strong></span></h4>
+<section id="bước-3kiểm-tra-giả-thuyết-cho-t-test" class="level4" data-number="8.0.0.3">
+<h4 data-number="8.0.0.3" class="anchored" data-anchor-id="bước-3kiểm-tra-giả-thuyết-cho-t-test"><span class="header-section-number">8.0.0.3</span> <span style="color:blue"><strong>Bước 3:Kiểm tra giả thuyết cho t-test</strong></span></h4>
 <p><span style="background-color:dodgerblue; text-align:center;color:white;font-size:24px;"><strong>Từ chỗ này trở đi ta sẽ tính riêng chỉ tiêu “LBL” cho “Flower A” và “Flower B”. Các chỉ tiêu còn lại thực hiện tương tự.</strong></span></p>
 <p><strong>Giả thuyết cho t-test 1 sample</strong></p>
 <p>While t-tests are relatively robust to deviations from assumptions, t-tests do assume that:</p>
@@ -648,8 +660,8 @@ $CLL
 <li><p>Data values are continuous. <span class="math inline">\(\Rightarrow\)</span> <mark style="background-color: #FFFF00">OK</mark></p></li>
 <li><p>The variances for the two independent groups are equal.</p></li>
 </ul>
-<section id="bước-3.1-thực-hiện-kiểm-tra-giả-thuyết-về-phân-bố-chuẩn" class="level5" data-number="7.0.0.3.1">
-<h5 data-number="7.0.0.3.1" class="anchored" data-anchor-id="bước-3.1-thực-hiện-kiểm-tra-giả-thuyết-về-phân-bố-chuẩn"><span class="header-section-number">7.0.0.3.1</span> <span style="color:green"><strong>Bước 3.1: Thực hiện kiểm tra giả thuyết về phân bố chuẩn</strong></span></h5>
+<section id="bước-3.1-thực-hiện-kiểm-tra-giả-thuyết-về-phân-bố-chuẩn" class="level5" data-number="8.0.0.3.1">
+<h5 data-number="8.0.0.3.1" class="anchored" data-anchor-id="bước-3.1-thực-hiện-kiểm-tra-giả-thuyết-về-phân-bố-chuẩn"><span class="header-section-number">8.0.0.3.1</span> <span style="color:green"><strong>Bước 3.1: Thực hiện kiểm tra giả thuyết về phân bố chuẩn</strong></span></h5>
 <p><span style="color:green"><strong>Cách 1: Sử dụng Q-Q plot</strong></span></p>
 <p><strong>Q-Q plot cho theo từng group.</strong></p>
 <div class="cell">
@@ -721,8 +733,8 @@ alternative hypothesis: two-sided</code></pre>
 <p><strong>Biện luận kết quả theo p-value của Kolmogorov-Smirnov’s test.</strong></p>
 <p><strong>Tham khảo: <code>https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test</code></strong></p>
 </section>
-<section id="bước-3.2-thực-hiện-kiểm-tra-giả-thuyết-về-khác-biệt-phương-sai" class="level5" data-number="7.0.0.3.2">
-<h5 data-number="7.0.0.3.2" class="anchored" data-anchor-id="bước-3.2-thực-hiện-kiểm-tra-giả-thuyết-về-khác-biệt-phương-sai"><span class="header-section-number">7.0.0.3.2</span> <span style="color:green"><strong>Bước 3.2: Thực hiện kiểm tra giả thuyết về khác biệt phương sai</strong></span></h5>
+<section id="bước-3.2-thực-hiện-kiểm-tra-giả-thuyết-về-khác-biệt-phương-sai" class="level5" data-number="8.0.0.3.2">
+<h5 data-number="8.0.0.3.2" class="anchored" data-anchor-id="bước-3.2-thực-hiện-kiểm-tra-giả-thuyết-về-khác-biệt-phương-sai"><span class="header-section-number">8.0.0.3.2</span> <span style="color:green"><strong>Bước 3.2: Thực hiện kiểm tra giả thuyết về khác biệt phương sai</strong></span></h5>
 <p><strong>We will check whether the variances across the two groups are same or not. Performs an F-test to compare the variances of two samples from normal populations.</strong></p>
 <p><code>https://www.datanovia.com/en/lessons/homogeneity-of-variance-test-in-r/</code></p>
 <p>There are different variance tests that can be used to assess the equality of variances. These include:</p>
@@ -799,8 +811,8 @@ Fligner-Killeen:med chi-squared = 4.5799, df = 1, p-value = 0.03235</code></pre>
 </div>
 </section>
 </section>
-<section id="bước-3-thực-hiện-kiểm-định-t-test" class="level4" data-number="7.0.0.4">
-<h4 data-number="7.0.0.4" class="anchored" data-anchor-id="bước-3-thực-hiện-kiểm-định-t-test"><span class="header-section-number">7.0.0.4</span> <span style="color:blue"><strong>Bước 3: Thực hiện kiểm định t-test</strong></span></h4>
+<section id="bước-3-thực-hiện-kiểm-định-t-test" class="level4" data-number="8.0.0.4">
+<h4 data-number="8.0.0.4" class="anchored" data-anchor-id="bước-3-thực-hiện-kiểm-định-t-test"><span class="header-section-number">8.0.0.4</span> <span style="color:blue"><strong>Bước 3: Thực hiện kiểm định t-test</strong></span></h4>
 <blockquote class="blockquote">
 <p>Recall that, <strong>by default</strong>, R computes the Welch t-test, which is the safer one. This is the test where you do not assume that the variance is the same in the two groups, which results in the fractional degrees of freedom. If you want to assume the equality of variances (Student t-test), specify the option var.equal = TRUE.</p>
 </blockquote>
@@ -851,8 +863,8 @@ mean in group Flower A mean in group Flower B
 <p>The unpaired two-samples Wilcoxon test (also known as Wilcoxon rank sum test or Mann-Whitney test) is a non-parametric alternative to the unpaired two-samples t-test, which can be used to compare two independent groups of samples. It’s used when your data are not normally distributed.</p>
 </blockquote>
 </section>
-<section id="bước-4-tính-effect-size" class="level4" data-number="7.0.0.5">
-<h4 data-number="7.0.0.5" class="anchored" data-anchor-id="bước-4-tính-effect-size"><span class="header-section-number">7.0.0.5</span> <span style="color:blue"><strong>Bước 4: Tính effect size</strong></span></h4>
+<section id="bước-4-tính-effect-size" class="level4" data-number="8.0.0.5">
+<h4 data-number="8.0.0.5" class="anchored" data-anchor-id="bước-4-tính-effect-size"><span class="header-section-number">8.0.0.5</span> <span style="color:blue"><strong>Bước 4: Tính effect size</strong></span></h4>
 <p>Salvatore S. Mangiafico. Summary and Analysis of Extension Program Evaluation in R. <code>https://rcompanion.org/documents/RHandbookProgramEvaluation.pdf</code></p>
 <blockquote class="blockquote">
 <p>Cohen’s d can be used as an effect size statistic for a two-sample t-test. It is calculated as the <em>difference</em> between the means of each group, all divided by the pooled standard deviation of the data.</p>
@@ -868,8 +880,8 @@ mean in group Flower A mean in group Flower B
 </div>
 </div>
 </section>
-<section id="bước-5-kiểm-tra-giả-thuyết-cho-t-test-cho-cùng-lúc-nhiều-cột" class="level4" data-number="7.0.0.6">
-<h4 data-number="7.0.0.6" class="anchored" data-anchor-id="bước-5-kiểm-tra-giả-thuyết-cho-t-test-cho-cùng-lúc-nhiều-cột"><span class="header-section-number">7.0.0.6</span> <span style="color:blue"><strong>Bước 5: Kiểm tra giả thuyết cho t-test cho cùng lúc nhiều cột</strong></span></h4>
+<section id="bước-5-kiểm-tra-giả-thuyết-cho-t-test-cho-cùng-lúc-nhiều-cột" class="level4" data-number="8.0.0.6">
+<h4 data-number="8.0.0.6" class="anchored" data-anchor-id="bước-5-kiểm-tra-giả-thuyết-cho-t-test-cho-cùng-lúc-nhiều-cột"><span class="header-section-number">8.0.0.6</span> <span style="color:blue"><strong>Bước 5: Kiểm tra giả thuyết cho t-test cho cùng lúc nhiều cột</strong></span></h4>
 <p>Ta cần chuyển dữ liệu về dạng long để thuận tiện xử lý và vẽ đồ thị.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform the data into long format</span></span>
@@ -1321,8 +1333,8 @@ mean in group Flower A mean in group Flower B
 </div>
 </div>
 </section>
-<section id="tài-liệu-tham-khảo" class="level4" data-number="7.0.0.7">
-<h4 data-number="7.0.0.7" class="anchored" data-anchor-id="tài-liệu-tham-khảo"><span class="header-section-number">7.0.0.7</span> Tài liệu tham khảo</h4>
+<section id="tài-liệu-tham-khảo" class="level4" data-number="8.0.0.7">
+<h4 data-number="8.0.0.7" class="anchored" data-anchor-id="tài-liệu-tham-khảo"><span class="header-section-number">8.0.0.7</span> Tài liệu tham khảo</h4>
 <ol type="1">
 <li><p><code>https://www.sthda.com/english/wiki/unpaired-two-samples-t-test-in-r</code></p></li>
 <li><p><code>https://www.datanovia.com/en/lessons/how-to-do-a-t-test-in-r-calculation-and-reporting/</code></p></li>
@@ -1728,12 +1740,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
       <a href="./khoang-tin-cay.html" class="pagination-link" aria-label="<b>Khoảng tin cậy là gì?</b>">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./phan-tich-anova-2-yeu-to-trong-r.html" class="pagination-link" aria-label="<b>Phân tích ANOVA 2 yếu tố trong R</b>">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><b>Phân tích ANOVA 2 yếu tố trong R</b></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
