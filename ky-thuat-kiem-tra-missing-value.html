@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - Cơ sở lý thuyết</title>
+<title>Thống kê sinh học: Từ lý thuyết đến ứng dụng - 25&nbsp; Kỹ thuật kiểm tra missing value NA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./khoang-tin-cay.html" rel="next">
-<link href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./ky-thuat-reshape-du-lieu.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -70,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./co-so-ly-thuyet.html">Cơ sở lý thuyết</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html">Kỹ thuật xử lý dữ liệu</a></li><li class="breadcrumb-item"><a href="./ky-thuat-kiem-tra-missing-value.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật kiểm tra missing value <code>NA</code></b></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -162,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./co-so-ly-thuyet.html" class="sidebar-item-text sidebar-link active">
+            <a href="./co-so-ly-thuyet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cơ sở lý thuyết</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -290,7 +353,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ky-thuat-kiem-tra-missing-value.html" class="sidebar-item-text sidebar-link">
+  <a href="./ky-thuat-kiem-tra-missing-value.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật kiểm tra missing value <code>NA</code></b></span></span></a>
   </div>
 </li>
@@ -311,9 +374,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./huong-dan-convert-tu-csv-qua-tsv-trong-r.html">Kỹ thuật xử lý dữ liệu</a></li><li class="breadcrumb-item"><a href="./ky-thuat-kiem-tra-missing-value.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật kiểm tra missing value <code>NA</code></b></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cơ sở lý thuyết</h1>
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật kiểm tra missing value <code>NA</code></b></span></h1>
 </div>
 
 
@@ -330,36 +393,197 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Nội dung của phần này sẽ điểm qua các định nghĩa nền tảng về xác suất và thống kê vốn cũng vừa quen vừa lạ với phần lớn mọi người. Vì các định nghĩa này rất quan trọng nên mình sẽ không trình bày lại ở đây mà sẽ dẫn nguồn đến các tài liệu gốc để các bạn xem trực tiếp từ nhận định của chuyên gia trong lĩnh vực xác suất thống kê, sau đó bạn sẽ tự rút ra được kết luận cho mình. Các chủ đề còn lại mình sẽ trình bày theo cách hiểu của mình để giúp bạn có thêm 1 góc nhìn từ người trong cuộc đang tìm cách ứng dụng R để xử lý bài toán thống kê cho các tình huống thường gặp.</p>
-<p>Nội dung các chủ đề này được thường xuyên sắp xếp để đảm bảo tính logic và hệ thống. Các chủ đề được xây dựng theo module để dần bao quát toàn bộ chương trình.</p>
-<ol type="1">
-<li><p>Xác suất là gì?</p></li>
-<li><p>Thống kê là gì?</p></li>
-<li><p>Cách tính số cỡ mẫu như thế nào để đạt ý nghĩa thống kê?</p></li>
-<li><p>Khoảng tin cậy (confidence interval) độ tin cậy (confidence level), mức ý nghĩa (significant level) là gì?</p></li>
-<li><p>Phân bố chuẩn (có tham số) và phân bố không chuẩn (phi tham số) là gì?</p></li>
-<li><p>Phương sai, độ lệch chuẩn, sai số chuẩn là gì?</p></li>
-<li><p>Hệ số biến thiên (CV) và p-value là gì?</p></li>
-<li><p>R<sup>2</sup> và R<sup>2</sup> điều chỉnh khác nhau ra sao?</p></li>
-<li><p>Quy trình để lựa chọn các phương pháp kiểm định thống kê phù hợp với dataset (statistical selection tool for raw data)</p></li>
-<li><p>Hồi quy là gì? Phân biệt giữa hồi quy đơn biến tuyến tính và phi tuyến. Phân biệt giữa hồi quy đơn biến và đa biến.</p></li>
-<li><p>Hiệp phương sai (covariance) và độ tương quan (correlation) là gì?</p></li>
-<li><p>Phân tích phương sai ANOVA 1 yếu tố</p></li>
-<li><p>Định nghĩa MANOVA, ANCOVA, MANCOVA</p></li>
-<li><p>Phân tích ANOVA 2 yếu tố kiểu RCBD trong R</p></li>
-<li><p>Phân tích ANCOVA trong R</p></li>
-<li><p>Định nghĩa về nested design analysis</p></li>
-<li><p>Hồi quy logistic</p></li>
-<li><p>Phân tích Power Analysis</p></li>
-<li><p>Phương pháp bootstrap</p></li>
-<li><p>Phương pháp clustering</p></li>
-<li><p>Phương pháp PCA</p></li>
-<li><p>Factor analysis</p></li>
-<li><p>Cách tính chỉ số OR</p></li>
-<li><p>Phương pháp tối ưu hóa</p></li>
-<li><p>Pooled sample standard error</p></li>
-<li><p>Workflow phân tích thống kê qua dataset <code>iris</code></p></li>
-</ol>
+<p><strong>Ta có 1 dataset gồm 30 dòng và 6 cột, trong đó có 1 số cột bị missing value. Để kiểm tra nhanh, ta sẽ dùng lệnh <code>summary()</code> tuy nhiên lệnh này không kiểm tra được các cột là <code>character</code>.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 30  6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                   name school student revenue expenditure type
+1            RIO GRANDE CITY GRULLA ISD     15    9007   14409       12858 &lt;NA&gt;
+2                             KEENE ISD      5    1016   16272       11291 &lt;NA&gt;
+3                             BRYAN ISD     25   16005   14613          NA &lt;NA&gt;
+4                          GOODRICH ISD      3     244   18543       13730 &lt;NA&gt;
+5                       HALE CENTER ISD      3     597   15541          NA &lt;NA&gt;
+6                            LAMESA ISD      1    1602   18810          NA &lt;NA&gt;
+7      EVOLUTION ACADEMY CHARTER SCHOOL      3     669   12607          NA    I
+8                            MALONE ISD      1     153   17031          NA &lt;NA&gt;
+9                           RAMIREZ CSD      1      26   22447       17483 &lt;NA&gt;
+10     ST MARY'S ACADEMY CHARTER SCHOOL      1     401   13897       13384    I
+11                      BLOOMINGTON ISD      5     825   13999       13182 &lt;NA&gt;
+12                           LOMETA ISD      2     317   22798          NA &lt;NA&gt;
+13 DR M L GARZA-GONZALEZ CHARTER SCHOOL      1     166   14006          NA    I
+14                 HARDIN-JEFFERSON ISD      5    2602   11022          NA &lt;NA&gt;
+15                ROSCOE COLLEGIATE ISD      4    3076   29616          NA &lt;NA&gt;
+16                       WESTPHALIA ISD      1     155   14312          NA &lt;NA&gt;
+17                         HEMPHILL ISD      3     901   16550          NA &lt;NA&gt;
+18                            MOODY ISD      4     687   15586          NA &lt;NA&gt;
+19                          PEWITT CISD      3     866   13718          NA &lt;NA&gt;
+20                  CORRIGAN-CAMDEN ISD      3     817   17796       15432 &lt;NA&gt;
+21                   PATTON SPRINGS ISD      1      86   29806       25965 &lt;NA&gt;
+22                        WINNSBORO ISD      4    1532   21267       11859 &lt;NA&gt;
+23                      PAINT CREEK ISD      1      95   29940       22333 &lt;NA&gt;
+24                    LIBERTY-EYLAU ISD      4    2131   19971       12415 &lt;NA&gt;
+25                     GOOSE CREEK CISD     31   23833   14213       12111 &lt;NA&gt;
+26             TEXAS PREPARATORY SCHOOL      2     120   16009       16096    I
+27                    TULOSO-MIDWAY ISD      6    3745   15313       10669 &lt;NA&gt;
+28                   NUECES CANYON CISD      2     254   16804       15142 &lt;NA&gt;
+29                         MISSION CISD     23   13838   15204       12062 &lt;NA&gt;
+30                           UNITED ISD     50   39243   12654       11226 &lt;NA&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(df, class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       name      school     student     revenue expenditure        type 
+"character"   "numeric"   "numeric"   "numeric"   "numeric" "character" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     name               school         student           revenue       expenditure        type          
+ Length:30          Min.   : 1.00   Min.   :   26.0   Min.   :11022   Min.   :10669   Length:30         
+ Class :character   1st Qu.: 1.25   1st Qu.:  246.5   1st Qu.:14238   1st Qu.:12062   Class :character  
+ Mode  :character   Median : 3.00   Median :  821.0   Median :15798   Median :13182   Mode  :character  
+                    Mean   : 7.10   Mean   : 4167.0   Mean   :17492   Mean   :14543                     
+                    3rd Qu.: 5.00   3rd Qu.: 2484.2   3rd Qu.:18743   3rd Qu.:15432                     
+                    Max.   :50.00   Max.   :39243.0   Max.   :29940   Max.   :25965                     
+                                                                      NA's   :13                        </code></pre>
+</div>
+</div>
+<p><strong>Do vậy để kiểm tra nhanh toàn bộ dataset <code>df</code> này có bao nhiêu giá trị missing value ở tất cả các cột (gồm <code>character</code> và <code>numeric</code>) thì ta dùng function <code>md.pattern()</code> trong package <code>mice</code>.</strong></p>
+<blockquote class="blockquote">
+<p>This function is useful for investigating any structure of missing observations in the data.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mice)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mice<span class="sc">::</span><span class="fu">md.pattern</span>(df, <span class="at">plot =</span> <span class="cn">TRUE</span>, <span class="at">rotate.names =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ky-thuat-kiem-tra-missing-value_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   name school student revenue expenditure type   
+2     1      1       1       1           1    1  0
+15    1      1       1       1           1    0  1
+2     1      1       1       1           0    1  1
+11    1      1       1       1           0    0  2
+      0      0       0       0          13   26 39</code></pre>
+</div>
+</div>
+<p><strong>Ở đây ta phân tích kỹ các con số từ đồ thị này để đánh giá tình hình missing value trong bộ dữ liệu. Cụ thể:</strong></p>
+<ul>
+<li><p>Giá trị nằm ngang dưới cùng (0, 0, 0, 0, 13, 26 và 39) lần lượt là <strong><em>số lượng</em></strong> missing value trong từng cột, còn số <strong>39</strong> nghĩa là trong toàn bộ dataset <code>df</code> (gồm 30 dòng và 6 cột, tạo thành tổng cộng 180 ô dữ liệu) có 39 ô bị giá trị trống. Được tính theo công thức: <span class="math inline">\(0 + 0 + 0 + 0 + 13 + 26 = 39\)</span>.</p></li>
+<li><p>Giá trị nằm bên trái (2, 15, 2, 11) tương ứng với các con số bên phải (0, 1, 1, 2) có ý nghĩa là:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">### số 2 là dataset chỉ còn 2 dòng (hàng) dữ liệu sau khi na.omit() toàn bộ các cột</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="do">### nghĩa là lúc này dataset không (số 0) còn cột nào có giá trị missing value</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>df_clean_all_column <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(df_clean_all_column) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df_clean_all_column)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_clean_all_column</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                              name school student revenue expenditure type
+1 ST MARY'S ACADEMY CHARTER SCHOOL      1     401   13897       13384    I
+2         TEXAS PREPARATORY SCHOOL      2     120   16009       16096    I</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">### số 15 là dataset có 15 dòng (hàng) dữ liệu đầy đủ tất cả thông tin (từ cột đầu tiên đến cột expenditure) </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="do">### ngoại trừ cột type (màu đỏ), lúc này toàn bộ giá trị ở cột type là NA.</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>df_clean_1 <span class="ot">&lt;-</span> df[<span class="fu">complete.cases</span>(df<span class="sc">$</span>name, df<span class="sc">$</span>school, df<span class="sc">$</span>student, df<span class="sc">$</span>revenue, df<span class="sc">$</span>expenditure), ]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>df_clean_1a <span class="ot">&lt;-</span> df_clean_1[<span class="fu">is.na</span>(df_clean_1<span class="sc">$</span>type), ] </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(df_clean_1a) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df_clean_1a) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15  6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_clean_1a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                         name school student revenue expenditure type
+1  RIO GRANDE CITY GRULLA ISD     15    9007   14409       12858 &lt;NA&gt;
+2                   KEENE ISD      5    1016   16272       11291 &lt;NA&gt;
+3                GOODRICH ISD      3     244   18543       13730 &lt;NA&gt;
+4                 RAMIREZ CSD      1      26   22447       17483 &lt;NA&gt;
+5             BLOOMINGTON ISD      5     825   13999       13182 &lt;NA&gt;
+6         CORRIGAN-CAMDEN ISD      3     817   17796       15432 &lt;NA&gt;
+7          PATTON SPRINGS ISD      1      86   29806       25965 &lt;NA&gt;
+8               WINNSBORO ISD      4    1532   21267       11859 &lt;NA&gt;
+9             PAINT CREEK ISD      1      95   29940       22333 &lt;NA&gt;
+10          LIBERTY-EYLAU ISD      4    2131   19971       12415 &lt;NA&gt;
+11           GOOSE CREEK CISD     31   23833   14213       12111 &lt;NA&gt;
+12          TULOSO-MIDWAY ISD      6    3745   15313       10669 &lt;NA&gt;
+13         NUECES CANYON CISD      2     254   16804       15142 &lt;NA&gt;
+14               MISSION CISD     23   13838   15204       12062 &lt;NA&gt;
+15                 UNITED ISD     50   39243   12654       11226 &lt;NA&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">### số 2 là dataset có 2 dòng (hàng) dữ liệu đầy đủ tất cả thông tin (từ cột đầu tiên đến cột type) </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="do">### ngoại trừ cột expenditure (màu đỏ), lúc này toàn bộ giá trị ở cột expenditure là NA.</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>df_clean_2 <span class="ot">&lt;-</span> df[<span class="fu">complete.cases</span>(df<span class="sc">$</span>name, df<span class="sc">$</span>school, df<span class="sc">$</span>student, df<span class="sc">$</span>revenue, df<span class="sc">$</span>type), ]</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>df_clean_2a <span class="ot">&lt;-</span> df_clean_2[<span class="fu">is.na</span>(df_clean_2<span class="sc">$</span>expenditure), ] </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(df_clean_2a) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df_clean_2a) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df_clean_2a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                  name school student revenue expenditure type
+1     EVOLUTION ACADEMY CHARTER SCHOOL      3     669   12607          NA    I
+2 DR M L GARZA-GONZALEZ CHARTER SCHOOL      1     166   14006          NA    I</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">### số 11 là dataset có 11 dòng (hàng) dữ liệu đầy đủ tất cả thông tin (từ cột đầu tiên đến cột revenue) </span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="do">### ngoại trừ cột expenditure và type (màu đỏ), lúc này toàn bộ giá trị ở cột expenditure và type là NA.</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>df_clean_3 <span class="ot">&lt;-</span> df[<span class="fu">complete.cases</span>(df<span class="sc">$</span>name, df<span class="sc">$</span>school, df<span class="sc">$</span>student, df<span class="sc">$</span>revenue), ]</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>df_clean_3a <span class="ot">&lt;-</span> df_clean_3[<span class="fu">is.na</span>(df_clean_3<span class="sc">$</span>type), ] </span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>df_clean_3b <span class="ot">&lt;-</span> df_clean_3a[<span class="fu">is.na</span>(df_clean_3a<span class="sc">$</span>expenditure), ] </span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(df_clean_3b) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df_clean_3b) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11  6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_clean_3b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    name school student revenue expenditure type
+1              BRYAN ISD     25   16005   14613          NA &lt;NA&gt;
+2        HALE CENTER ISD      3     597   15541          NA &lt;NA&gt;
+3             LAMESA ISD      1    1602   18810          NA &lt;NA&gt;
+4             MALONE ISD      1     153   17031          NA &lt;NA&gt;
+5             LOMETA ISD      2     317   22798          NA &lt;NA&gt;
+6   HARDIN-JEFFERSON ISD      5    2602   11022          NA &lt;NA&gt;
+7  ROSCOE COLLEGIATE ISD      4    3076   29616          NA &lt;NA&gt;
+8         WESTPHALIA ISD      1     155   14312          NA &lt;NA&gt;
+9           HEMPHILL ISD      3     901   16550          NA &lt;NA&gt;
+10             MOODY ISD      4     687   15586          NA &lt;NA&gt;
+11           PEWITT CISD      3     866   13718          NA &lt;NA&gt;</code></pre>
+</div>
+</div>
 
 
 
@@ -753,13 +977,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./so-sanh-cu-phap-ve-do-thi-qua-cac-package-khac-nhau.html" class="pagination-link" aria-label="<b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b>">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><b>So sánh cú pháp vẽ đồ thị trong R qua các package khác nhau</b></span></span>
+      <a href="./ky-thuat-reshape-du-lieu.html" class="pagination-link" aria-label="<b>Kỹ thuật reshape dữ liệu</b>">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title"><b>Kỹ thuật reshape dữ liệu</b></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./khoang-tin-cay.html" class="pagination-link" aria-label="<b>Khoảng tin cậy là gì?</b>">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><b>Khoảng tin cậy là gì?</b></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Tài liệu tham khảo">
+        <span class="nav-page-text">Tài liệu tham khảo</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
