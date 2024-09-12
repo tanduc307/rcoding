@@ -1,1 +1,0 @@
-# **Các lệnh đồ thị sử dụng package `ggplot2`** 
